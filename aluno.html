@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Aluno(a)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Perfil do Aluno</h1>
+        <p>Aqui está sua rotina de treinos para a semana:</p>
+
+        <div id="trainingSchedule">
+            <h3>Segunda-feira:</h3>
+            <p id="segunda"></p>
+            <h3>Terça-feira:</h3>
+            <p id="terca"></p>
+            <h3>Quarta-feira:</h3>
+            <p id="quarta"></p>
+            <h3>Quinta-feira:</h3>
+            <p id="quinta"></p>
+            <h3>Sexta-feira:</h3>
+            <p id="sexta"></p>
+            <h3>Sábado:</h3>
+            <p id="sabado"></p>
+            <h3>Domingo:</h3>
+            <p id="domingo"></p>
+        </div>
+
+        <button onclick="window.location.href='index.html'">Sair</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina do Aluno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rotina de Treino</h1>
+        <div id="routineOutput"></div>
+        <button onclick="window.location.href='login.html'">Sair</button>
+    </div>
+
+    <script>
+        // Recupera a rotina salva no localStorage
+        const trainingRoutine = JSON.parse(localStorage.getItem("trainingRoutine"));
+
+        // Exibe a rotina na página
+        const routineOutput = document.getElementById("routineOutput");
+        if (trainingRoutine) {
+            let outputHTML = '<ul>';
+            for (const day in trainingRoutine) {
+                outputHTML += `<li><strong>${day}:</strong><ul>`;
+                trainingRoutine[day].forEach(exercise => {
+                    outputHTML += `<li>${exercise}</li>`;
+                });
+                outputHTML += '</ul></li>';
+            }
+            outputHTML += '</ul>';
+            routineOutput.innerHTML = outputHTML;
+        } else {
+            routineOutput.innerHTML = "<p>Nenhuma rotina salva.</p>";
+        }
+    </script>
+</body>
+</html>
+

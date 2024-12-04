@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Professor(a) ou Aluno(a)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            
+            <label for="userType">Tipo de usuário</label>
+            <select id="userType" name="userType" required>
+                <option value="professor">Professor(a)</option>
+                <option value="aluno">Aluno(a)</option>
+            </select>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        
+        <p id="error-message" class="error-message" style="display: none;">Usuário, senha ou tipo de usuário incorretos.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

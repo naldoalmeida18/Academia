@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Painel do Professor</h1>
+        <p>Selecione os exercícios de musculação para cada dia da semana:</p>
+        
+        <form id="trainingForm">
+            <div class="days-container">
+                <div class="day">
+                    <h3>Segunda-feira</h3>
+                    <label><input type="checkbox" name="monday" value="Agachamento"> Agachamento</label>
+                    <label><input type="checkbox" name="monday" value="Panturrilha"> Panturrilha</label>
+                    <label><input type="checkbox" name="monday" value="Leg Press"> Leg Press</label>
+                    <label><input type="checkbox" name="monday" value="Afundo"> Afundo</label>
+                    <label><input type="checkbox" name="monday" value="Elevação de Pernas"> Elevação de Pernas</label>
+                    <label><input type="checkbox" name="monday" value="Supino"> Supino</label>
+                </div>
+                <div class="day">
+                    <h3>Terça-feira</h3>
+                    <label><input type="checkbox" name="tuesday" value="Agachamento"> Agachamento</label>
+                    <label><input type="checkbox" name="tuesday" value="Panturrilha"> Panturrilha</label>
+                    <label><input type="checkbox" name="tuesday" value="Leg Press"> Leg Press</label>
+                    <label><input type="checkbox" name="tuesday" value="Afundo"> Afundo</label>
+                    <label><input type="checkbox" name="tuesday" value="Elevação de Pernas"> Elevação de Pernas</label>
+                    <label><input type="checkbox" name="tuesday" value="Supino"> Supino</label>
+                </div>
+                <div class="day">
+                    <h3>Quarta-feira</h3>
+                    <label><input type="checkbox" name="wednesday" value="Agachamento"> Agachamento</label>
+                    <label><input type="checkbox" name="wednesday" value="Panturrilha"> Panturrilha</label>
+                    <label><input type="checkbox" name="wednesday" value="Leg Press"> Leg Press</label>
+                    <label><input type="checkbox" name="wednesday" value="Afundo"> Afundo</label>
+                    <label><input type="checkbox" name="wednesday" value="Elevação de Pernas"> Elevação de Pernas</label>
+                    <label><input type="checkbox" name="wednesday" value="Supino"> Supino</label>
+                </div>
+                <div class="day">
+                    <h3>Quinta-feira</h3>
+                    <label><input type="checkbox" name="thursday" value="Agachamento"> Agachamento</label>
+                    <label><input type="checkbox" name="thursday" value="Panturrilha"> Panturrilha</label>
+                    <label><input type="checkbox" name="thursday" value="Leg Press"> Leg Press</label>
+                    <label><input type="checkbox" name="thursday" value="Afundo"> Afundo</label>
+                    <label><input type="checkbox" name="thursday" value="Elevação de Pernas"> Elevação de Pernas</label>
+                    <label><input type="checkbox" name="thursday" value="Supino"> Supino</label>
+                </div>
+                <div class="day">
+                    <h3>Sexta-feira</h3>
+                    <label><input type="checkbox" name="friday" value="Agachamento"> Agachamento</label>
+                    <label><input type="checkbox" name="friday" value="Panturrilha"> Panturrilha</label>
+                    <label><input type="checkbox" name="friday" value="Leg Press"> Leg Press</label>
+                    <label><input type="checkbox" name="friday" value="Afundo"> Afundo</label>
+                    <label><input type="checkbox" name="friday" value="Elevação de Pernas"> Elevação de Pernas</label>
+                    <label><input type="checkbox" name="friday" value="Supino"> Supino</label>
+                </div>
+                <div class="day">
+                    <h3>Sábado</h3>
+                    <label><input type="checkbox" name="saturday" value="Agachamento"> Agachamento</label>
+                    <label><input type="checkbox" name="saturday" value="Panturrilha"> Panturrilha</label>
+                    <label><input type="checkbox" name="saturday" value="Leg Press"> Leg Press</label>
+                    <label><input type="checkbox" name="saturday" value="Afundo"> Afundo</label>
+                    <label><input type="checkbox" name="saturday" value="Elevação de Pernas"> Elevação de Pernas</label>
+                    <label><input type="checkbox" name="saturday" value="Supino"> Supino</label>
+                </div>
+            </div>
+            <button type="submit">Salvar Rotina</button>
+        </form>
+        
+        <div id="savedRoutine" class="saved-routine">
+            <h2>Rotina de Treinamento Salva</h2>
+            <ul id="routineList"></ul>
+            <button onclick="window.location.href='index.html'">Sair</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

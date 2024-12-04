@@ -1,0 +1,203 @@
+/* Geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem; /* Padrão para acessibilidade */
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Títulos principais */
+h1 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+button {
+    padding: 15px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Botões de ações perigosas */
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Substitui margens */
+}
+
+form label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.2);
+    outline: none;
+}
+
+/* Campos inválidos */
+input:invalid, select:invalid {
+    border-color: #e74c3c;
+}
+
+/* Mensagens */
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    color: #27ae60;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Página do professor - rotina salva */
+.saved-routine {
+    margin-top: 30px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.saved-routine h2 {
+    text-align: center;
+    color: #2980b9;
+}
+
+.saved-routine ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.saved-routine li {
+    padding: 8px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Marcador personalizado nas listas */
+.saved-routine li::before {
+    content: "✓";
+    color: #27ae60;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Páginas de login e perfil */
+.login-container, .profile-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h1, .profile-container h1 {
+    font-size: 1.8em;
+    color: #2980b9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-container p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555; /* Maior contraste para melhor leitura */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-container, .profile-container {
+        padding: 15px;
+    }
+
+    body {
+        font-size: 0.9em; /* Texto menor em telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+}
